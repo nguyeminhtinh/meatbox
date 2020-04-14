@@ -1,0 +1,176 @@
+.register-device {
+  .input__wrapper {
+    display: block;
+
+    .input.red {
+      border-color: $red;
+    }
+
+    .error-msg {
+      margin: pxToRem(5) 0;
+      line-height: 1;
+    }
+  }
+
+  .row__custom {
+    border: pxToRem(1) solid $boder-table;
+    border-bottom: 0;
+    margin: 0;
+
+    .title {
+      @include breakpoint(sm320) {
+        font-size: pxToRem(11);
+      }
+
+      span {
+        color: $red;
+      }
+    }
+
+    .d-flex .wrap-radio:nth-child(2) {
+      margin: 0px pxToRem(30);
+    }
+
+    .input {
+      border-radius: pxToRem(4);
+
+      @include breakpoint(sm320) {
+        font-size: pxToRem(13);
+      }
+    }
+
+    .input__box,
+    input {
+      margin-left: 0;
+
+      &:disabled {
+        background-color: $gray-light;
+      }
+    }
+
+    .row span {
+      font-size: pxToRem(25);
+      line-height: 33px;
+    }
+  }
+
+  .custom-radio .label {
+    white-space: nowrap;
+
+    @include breakpoint(sm320) {
+      font-size: pxToRem(13);
+    }
+  }
+
+  .button-custom .btn {
+    margin: pxToRem(8);
+  }
+
+  &__popup,
+  &__maintenance-history {
+    .input__box {
+      margin-left: 0;
+
+      .input {
+        border-radius: pxToRem(4);
+        margin-left: 0;
+        border-color: $gray-light;
+
+        @include breakpoint(sm320) {
+          font-size: pxToRem(13);
+        }
+      }
+    }
+
+    .btn-add-history {
+      width: 50%;
+      height: 100%;
+
+      @include breakpoint(sm320) {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .double-label {
+    min-width: pxToRem(90);
+
+    @include breakpoint(lg1024) {
+      min-width: pxToRem(85);
+    }
+  }
+}
+
+.line-phone {
+  @include breakpoint(sm768) {
+    .col-3 {
+      flex: 0 0 31%;
+      max-width: 31%;
+    }
+  }
+
+  .input__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .error-msg {
+      font-size: pxToRem(10);
+      text-align: left;
+    }
+  }
+}
+
+.reset-password {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include breakpoint(sm768) {
+    display: block;
+
+    button {
+      margin-bottom: pxToRem(10);
+    }
+  }
+}
+
+.form-update {
+  display: flex;
+
+  .input__wrapper {
+    width: calc((100% - #{pxToRem(74)}));
+    padding-right: pxToRem(15);
+  }
+}
+
+.temperature {
+  .input__wrapper {
+    width: pxToRem(240);
+  }
+}
+
+.popup-list-store {
+  .table {
+    tbody {
+      tr {
+        td {
+          &:last-child {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.register-device__maintenance-history {
+  tr td:nth-child(4) {
+    width: 60%;
+  }
+}
+.typePassword {
+  letter-spacing: 0.5rem;
+  -webkit-text-stroke-width: pxToRem(5);
+  text-indent: pxToRem(3);
+}

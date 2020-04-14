@@ -1,0 +1,53 @@
+.payment-history {
+  text-align: left;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+
+  .table-history {
+    margin-bottom: pxToRem(20);
+
+    h3 {
+      font-size: pxToRem(20);
+      background-color: $alto-transparent;
+      margin-bottom: 0;
+      padding: pxToRem(10);
+    }
+
+    .d-flex {
+      border: pxToRem(1) solid $silver;
+      border-bottom: 0;
+
+      &:last-child {
+        border-bottom: pxToRem(1) solid $silver;
+      }
+
+      .col-4 {
+        border-right: pxToRem(1) solid $silver;
+        padding: pxToRem(10);
+      }
+
+      .col-8 {
+        padding: pxToRem(10);
+
+        &.money {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+.table-payment{
+  .table{
+    tr{
+      td{
+        &:nth-of-type(8){
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.download-excel{
+  text-align: right;
+}

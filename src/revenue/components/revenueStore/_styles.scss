@@ -1,0 +1,125 @@
+.custom-popup-detail {
+  .modal-dialog {
+    .modal-header {
+      border-bottom: 1px solid $boder-table !important;
+    }
+
+    @include ie11() {
+      .modal-content {
+        top: 25%;
+        transform: translateY(-25%);
+      }
+    }
+  }
+
+  &.detail-payment {
+    .modal-dialog {
+      max-width: pxToRem(600);
+    }
+
+    @media screen and (max-width: 1550px) {
+      .modal-dialog {
+        margin-top: 0;
+      }
+
+      .modal-content .modal-body {
+        height: 500px;
+        overflow-y: auto;
+      }
+    }
+
+    @media screen and (max-width: 576px) {
+      .modal-content .modal-body {
+        height: 300px;
+        overflow-y: auto;
+      }
+    }
+  }
+}
+
+.table-revenues-store {
+  tr {
+    td {
+      &:nth-of-type(7) {
+        display: none;
+      }
+    }
+  }
+}
+
+.table-scroll {
+  max-height: pxToRem(300);
+  overflow-y: auto;
+
+  tr {
+    td {
+      &:nth-of-type(5) {
+        text-align: center;
+      }
+
+      &:nth-of-type(7) {
+        text-align: right;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 1599px) {
+  .custom-popup-detail {
+    .modal-dialog {
+      margin-bottom: pxToRem(50);
+    }
+  }
+}
+
+@include breakpoint(lg1024) {
+  .custom-popup-detail {
+    z-index: 9999 !important;
+
+    .modal-dialog {
+      margin-top: 0;
+      margin-bottom: 0;
+      max-width: pxToRem(700);
+    }
+  }
+}
+
+@include breakpoint(sm768) {
+  .register-device__popup {
+    display: block;
+    text-align: right;
+
+    .customer-select {
+      margin-bottom: pxToRem(10);
+    }
+
+    button {
+      margin-top: pxToRem(10);
+    }
+  }
+}
+
+@media screen and (max-height: 300px) {
+  .custom-popup-detail {
+    .modal-dialog {
+      top: 60%;
+    }
+  }
+}
+
+.title-detail {
+  background-color: $alto-transparent;
+  width: 100%;
+  padding: pxToRem(10);
+  font-weight: $bold;
+}
+
+.popup-revenues-detail {
+  @media screen and (max-width: 1200px) {
+    z-index: 9999 !important;
+  }
+
+  @media screen and (max-width: 414px) {
+    z-index: 1050 !important;
+  }
+}

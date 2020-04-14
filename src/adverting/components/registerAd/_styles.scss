@@ -1,0 +1,239 @@
+.wrapper-list-adverting {
+  margin-bottom: pxToRem(30);
+  padding: 0 !important;
+
+  .adverting-type {
+    border-top: pxToRem(1) solid $hummer;
+    border-right: pxToRem(1) solid $hummer;
+    padding: pxToRem(15);
+    border-left: pxToRem(1) solid $hummer;
+
+    .wrap-radio {
+      margin-right: pxToRem(35);
+    }
+  }
+
+  @include breakpoint(sm992) {
+    overflow-x: scroll;
+    position: relative;
+    padding: 0 !important;
+
+    .list-adverting {
+      width: pxToRem(1230);
+      display: inline-block;
+    }
+
+    .wrapper-btn {
+      margin-right: pxToRem(40);
+      margin-bottom: pxToRem(30);
+    }
+  }
+
+  .list-adverting {
+    border: pxToRem(1) solid $hummer;
+  }
+
+  .row-item {
+    border-bottom: pxToRem(1) solid $hummer;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    &__image,
+    &__no,
+    &__title,
+    &__file,
+    &__btn-action {
+      padding: pxToRem(15) pxToRem(10);
+    }
+
+    &__image {
+      width: pxToRem(146);
+
+      .images {
+        width: pxToRem(130);
+        min-height: pxToRem(140);
+        border: pxToRem(1) solid $hummer;
+
+        video {
+          width: 100%;
+          height: 100%;
+          background: $white;
+        }
+      }
+    }
+
+    &__no {
+      width: 5%;
+      position: relative;
+
+      .middle-content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      button {
+        min-width: auto;
+        display: block;
+        margin: auto;
+      }
+
+      img {
+        width: pxToRem(35);
+      }
+    }
+
+    &__title {
+      width: 35%;
+
+      .input__wrapper {
+        width: 100%;
+
+        .input__box {
+          margin: 0;
+        }
+      }
+    }
+
+    &__file {
+      width: 35%;
+    }
+
+    &__btn-action {
+      width: 15%;
+    }
+
+    .input__wrapper {
+      display: block;
+
+      .input__box {
+        margin: 0;
+      }
+
+      input {
+        margin-left: 0;
+        border-radius: pxToRem(5);
+        border: pxToRem(1) solid $hummer;
+        width: 100%;
+      }
+    }
+
+    &.item-label {
+      font-weight: bold;
+    }
+  }
+}
+
+.custom-file {
+  height: 2.5rem !important;
+
+  .custom-file-input {
+    height: 2.5rem !important;
+    cursor: pointer;
+  }
+
+  .custom-file-label {
+    overflow: hidden;
+    height: 2.5rem;
+    padding: pxToRem(7);
+    line-height: 1.6rem;
+  }
+}
+
+.custom-file-input~.custom-file-label::after {
+  content: '파일찾기';
+  height: 2.5rem;
+}
+
+.custom-file-input:disabled~.custom-file-label,
+.custom-file-input[disabled]~.custom-file-label {
+  background-color: $bg-disabled !important;
+}
+
+.img-adverting {
+  width: 100%;
+  height: 100%;
+}
+
+.modal-review {
+  .modal-dialog {
+    max-width: pxToRem(1000);
+
+    .content-box-ad {
+      display: flex;
+      justify-content: space-around;
+
+      .col-sm-3 {
+        height: pxToRem(200);
+        border: 1px solid;
+        margin: pxToRem(20) pxToRem(10);
+        display: flex;
+        align-items: center;
+        max-width: 18%;
+        flex: 0 0 18%;
+      }
+
+      .col-sm-4 {
+        height: pxToRem(200);
+        border: 1px solid;
+        margin: pxToRem(20) pxToRem(10);
+        display: flex;
+        align-items: center;
+        max-width: 32%;
+        flex: 0 0 32%;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: '1300px') {
+      max-width: pxToRem(700);
+    }
+
+    @include breakpoint(xm480) {
+      height: 100%;
+
+      .modal-content {
+        top: pxToRem(670);
+      }
+
+      .content-box-ad {
+        display: block;
+        width: 100%;
+        margin: 0;
+
+        .col-sm-3 {
+          height: pxToRem(200);
+          margin: pxToRem(5) pxToRem(0);
+          justify-content: center;
+          max-width: 100%;
+        }
+
+        .col-sm-4 {
+          height: pxToRem(200);
+          margin: pxToRem(5) pxToRem(0);
+          justify-content: center;
+          max-width: 100%;
+        }
+      }
+    }
+
+    @include breakpoint(sm320) {
+      margin-top: pxToRem(20);
+
+      .modal-content {
+        top: pxToRem(640);
+      }
+    }
+  }
+}
+
+.wrapper-loading.custom-position {
+  position: fixed;
+  left: 55%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+}

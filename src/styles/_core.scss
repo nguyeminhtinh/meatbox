@@ -1,0 +1,84 @@
+body {
+  font-family: 'Noto Sans KR' !important;
+}
+
+.error-msg {
+  color: $red;
+  font-size: pxToRem(14);
+}
+
+.reset-padding {
+  padding: 0 !important;
+}
+
+.wrapper-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  @media screen and (min-width: 767px) {
+    height: calc(100vh - 360px);
+  }
+}
+
+.title {
+  font-weight: $medium;
+}
+
+.table-price-2-3 td:nth-child(2),
+.table-price-2-3 td:nth-child(3),
+.table-price-3 td:nth-child(3),
+.table-price-3-4 td:nth-child(3),
+.table-price-4 td:nth-child(4),
+.table-price-3-4 td:nth-child(4),
+.table-price-4-5 td:nth-child(4),
+.table-price-4-5 td:nth-child(5),
+.table-price-5 td:nth-child(5),
+.table-price td:nth-child(5),
+.table-price td:nth-child(6) {
+  text-align: right;
+}
+
+.table-left-6 td:nth-child(6) {
+  text-align: left;
+}
+
+textarea:disabled {
+  background-color: $bg-disabled !important;
+}
+
+.css-yk16xz-control {
+  height: 100%;
+}
+
+input {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+input::placeholder,
+input::-webkit-input-placeholder,
+input::-moz-placeholder {
+  line-height: normal !important;
+  color: $steal;
+}
+
+input[type='text']::-ms-clear {
+  display: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input:focus {
+  box-shadow: none !important;
+}
+
+.redirectLogin {
+  z-index: 99999999 !important;
+}

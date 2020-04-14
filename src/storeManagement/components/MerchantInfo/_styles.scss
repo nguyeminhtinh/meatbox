@@ -1,0 +1,107 @@
+.btn-sm {
+  width: auto;
+  padding: 0 pxToRem(20);
+  line-height: pxToRem(30);
+  height: auto;
+}
+
+.title-custom {
+  font-size: pxToRem(25);
+  margin-bottom: pxToRem(16);
+}
+
+.wrapper__info {
+  background-color: $white;
+
+  .input__box {
+    margin: 0;
+  }
+
+  .input {
+    margin: 0;
+    display: block;
+    width: 100%;
+    padding: pxToRem(6) pxToRem(12) !important;
+    line-height: 1.5;
+    background-clip: padding-box;
+    border: 1px solid $boder-table;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out;
+
+    @include breakpoint(sm375) {
+      padding: pxToRem(6);
+    }
+
+    &:disabled {
+      background-color: $bg-disabled !important;
+    }
+  }
+
+  .row__custom {
+    border: pxToRem(1) solid $boder-table;
+    border-bottom: 0;
+    margin: 0;
+
+    &:last-child {
+      border-bottom: pxToRem(1) solid $boder-table;
+    }
+
+    > div {
+      border-right: pxToRem(1) solid $boder-table;
+
+      @include breakpoint(sm768) {
+        border-right: 0;
+      }
+
+      &:nth-child(2) {
+        border-right: 0;
+      }
+    }
+  }
+
+  .count-user {
+    display: flex;
+    justify-content: flex-end;
+
+    div {
+      padding: pxToRem(10) 0;
+      border: pxToRem(1) solid $alto-transparent;
+      width: pxToRem(170);
+      text-align: center;
+
+      &:first-child {
+        border-right: 0;
+      }
+
+      @include breakpoint(sm360) {
+        font-size: pxToRem(12);
+      }
+    }
+  }
+}
+
+.edit-store.card-header {
+  border: pxToRem(1) solid $boder-table;
+  border-bottom: 0;
+  font-size: 1.25rem;
+}
+.card-header {
+  font-size: 1.25rem;
+}
+.input-50 {
+  .input__wrapper {
+    max-width: 50%;
+
+    @include breakpoint(sm768) {
+      max-width: 100%;
+    }
+  }
+}
+
+.row.row-50 {
+  max-width: calc(50% + 15px);
+
+  @include breakpoint(sm768) {
+    max-width: calc(100% + 15px);
+  }
+}

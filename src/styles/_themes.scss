@@ -1,0 +1,176 @@
+body a {
+  text-decoration: none;
+
+  img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@include breakpoint(xl500) {
+  .wrap-chart {
+    overflow-x: scroll;
+
+    .recharts-responsive-container {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.overflow-x {
+  position: relative;
+
+  @include breakpoint(xl500) {
+    &.bar-chart {
+      .wrap-chart {
+        overflow-x: unset;
+      }
+
+      .recharts-responsive-container {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  @include breakpoint(lg1280) {
+    &.bar-chart {
+      .wrap-chart {
+        overflow-x: scroll;
+      }
+    }
+  }
+}
+
+.line-chart {
+  &.line-overflow-x {
+    position: relative;
+
+    .wrap-chart {
+      @include breakpoint(xl500) {
+        overflow-x: unset;
+      }
+    }
+
+    @include breakpoint(xm480) {
+      .wrap-chart {
+        overflow-x: scroll;
+
+        .recharts-responsive-container {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+ul.pagination {
+  justify-content: center;
+  padding: 0;
+  margin: pxToRem(20) 0;
+
+  @include breakpoint(sm992) {
+    margin-top: pxToRem(20);
+  }
+
+  @include breakpoint(xm480) {
+    .page-item {
+      .page-link {
+        padding: pxToRem(4) pxToRem(8);
+        font-size: pxToRem(10);
+      }
+    }
+  }
+}
+
+.table-price {
+  td:nth-child(5) {
+    text-align: right;
+  }
+
+  td:nth-child(6) {
+    text-align: right;
+  }
+}
+
+.table-price-4-5 {
+  td:nth-child(4) {
+    text-align: right;
+  }
+
+  td:nth-child(5) {
+    text-align: right;
+  }
+}
+
+.table-price-2-3 {
+  td:nth-child(2) {
+    text-align: right;
+  }
+
+  td:nth-child(3) {
+    text-align: right;
+  }
+}
+
+.table-price-3-4 {
+  td:nth-child(3) {
+    text-align: right;
+  }
+
+  td:nth-child(4) {
+    text-align: right;
+  }
+}
+
+.react-datepicker__header {
+  .react-datepicker__current-month--hasYearDropdown {
+    display: none;
+  }
+
+  .react-datepicker__month-read-view--selected-month,
+  .react-datepicker__year-read-view--selected-year {
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
+.text-error {
+  color: $red;
+  font-size: pxToRem(14);
+}
+
+.store-management,
+.home-main,
+.member-page.border {
+  border-top: 0 !important;
+}
+
+.border-wrapper,
+.device-page.border {
+  border: 0.0625rem solid $gray-light;
+  border-top: 0 !important;
+}
+
+.css-1hwfws3 {
+  overflow: initial !important;
+  height: 100%;
+}
+
+.css-1uccc91-singleValue {
+  overflow: initial !important;
+}
+
+.modalSetting.d-none-btn {
+  .modal-footer {
+    display: none;
+  }
+}
+
+.react-datepicker__input-container input:disabled~.react-datepicker__close-icon {
+  pointer-events: none;
+}

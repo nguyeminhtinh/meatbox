@@ -1,0 +1,71 @@
+.wrapper-approvalInfo {
+  border-bottom: pxToRem(1) solid $hummer;
+
+  input {
+    margin-left: 0;
+    border-radius: pxToRem(5);
+    border: pxToRem(1) solid $hummer;
+    width: 100%;
+  }
+
+  .row-item {
+    border: pxToRem(1) solid $hummer;
+    border-bottom: 0;
+
+    input[disabled] {
+      background-color: $bg-disabled;
+    }
+
+    &__label {
+      width: 20%;
+      padding: pxToRem(15);
+    }
+
+    .input__box {
+      margin-left: 0;
+    }
+
+    &__content {
+      padding: pxToRem(15);
+      width: 80%;
+      border-left: pxToRem(1) solid $hummer;
+
+      &.content-file {
+        button {
+          line-height: pxToRem(30);
+          margin: 0 !important;
+        }
+
+        .input__wrapper {
+          width: calc(100% - 6.25rem);
+          padding-right: pxToRem(10);
+        }
+      }
+    }
+  }
+
+  @include breakpoint(xm480) {
+    .row-item {
+      border-bottom: 0;
+      display: block !important;
+
+      input[disabled] {
+        background-color: $bg-disabled;
+      }
+
+      &__label {
+        width: 100%;
+        padding-bottom: 0;
+      }
+
+      .input__box {
+        margin-left: 0;
+      }
+
+      &__content {
+        border: 0;
+        width: 100%;
+      }
+    }
+  }
+}

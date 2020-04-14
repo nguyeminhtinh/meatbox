@@ -1,0 +1,73 @@
+.device-status {
+  width: 100%;
+  margin-bottom: pxToRem(30);
+  margin-top: pxToRem(30);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  .wrapper__status {
+    width: pxToRem(450);
+    margin: 0;
+  }
+
+  a.btn.btn-primary {
+    line-height: pxToRem(55);
+    height: pxToRem(70);
+  }
+
+  @include breakpoint(xm480) {
+    display: block;
+    text-align: right;
+
+    .wrapper__status {
+      width: 100%;
+      margin-bottom: pxToRem(10);
+    }
+
+    .btn-register {
+      text-align: right;
+      margin-top: pxToRem(10);
+    }
+  }
+}
+
+@media screen and (min-width: 767px) {
+  height: calc(100vh - 450px);
+}
+
+.table-store-list {
+  max-height: pxToRem(250);
+  overflow-y: auto;
+
+  tr td:nth-child(7) {
+    display: none !important;
+  }
+
+  tr td:nth-child(6) {
+    display: none !important;
+  }
+
+  tr td:nth-child(5) {
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .pt-mobile {
+    padding-top: pxToRem(8);
+  }
+}
+
+.popup-list-store {
+  .table-store-list {
+    .wrap-loading {
+      display: inline-block;
+      position: absolute;
+      z-index: 999;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.list-images-management {
+  .table .checkbox .checkbox__label {
+    &::before {
+      top: pxToRem(-10);
+    }
+
+    &:after {
+      top: pxToRem(-4);
+    }
+  }
+}

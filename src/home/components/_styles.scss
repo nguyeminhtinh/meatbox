@@ -1,0 +1,12 @@
+h1 {
+  font-family: $NanumSquare-Font;
+  font-weight: $thin;
+}
+
+.home-main {
+  @media screen and (min-width: 767px) {
+    .wrapper-loading {
+      height: calc(100vh - 120px);
+    }
+  }
+}

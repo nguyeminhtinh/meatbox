@@ -1,0 +1,116 @@
+table {
+
+  tbody td,
+  th {
+    vertical-align: middle !important;
+    text-align: center;
+  }
+
+  thead th {
+    background-color: $dove-gray;
+    color: $white;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+
+  tbody .row-active {
+    @include transition(0.3s);
+    background-color: $blue-linght !important;
+
+    td {
+      color: $white;
+    }
+
+    &:hover {
+      background-color: $blue-linght !important;
+
+      td {
+        color: $white;
+      }
+
+      @include transition(0.1s);
+    }
+  }
+
+  @include breakpoint(xm480) {
+
+    tbody td,
+    th {
+      font-size: pxToRem(14);
+      min-width: pxToRem(120);
+
+      &:first-child {
+        min-width: pxToRem(60);
+      }
+    }
+  }
+
+  .color-red {
+    color: $red;
+  }
+
+  .color-blue {
+    color: $color-box1;
+  }
+}
+
+.row-cursor-pointer {
+  cursor: pointer;
+}
+
+body .table.table-striped .table-no-data {
+  border: 1px solid $dusty-gray;
+  border-top: 0;
+
+  td {
+    display: table-cell !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .table {
+    width: 120% !important;
+
+    &.table-total {
+      width: 100% !important;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .table {
+    width: 100% !important;
+  }
+}
+
+.table-list-product {
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .checkbox {
+    position: relative;
+    top: pxToRem(-5);
+
+    &__label {
+      margin-bottom: 0;
+    }
+  }
+
+  td:nth-child(1) {
+    width: pxToRem(100);
+  }
+
+  td:nth-child(2) {
+    width: pxToRem(100);
+  }
+
+  td:nth-child(3) {
+    width: pxToRem(150);
+  }
+
+  td:nth-child(4) {
+    width: 10%;
+  }
+}
